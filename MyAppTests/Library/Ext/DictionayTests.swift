@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import MyApp
+@testable import KizyApp
 
 final class DictionayTests: XCTestCase {
     func testUpdateValues() {

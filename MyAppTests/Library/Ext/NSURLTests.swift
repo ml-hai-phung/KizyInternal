@@ -9,7 +9,7 @@
 import XCTest
 import SwiftUtils
 
-@testable import MyApp
+@testable import KizyApp
 
 final class NSURLTests: XCTestCase {
     func testInit() {

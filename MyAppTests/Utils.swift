@@ -8,7 +8,7 @@
 
 import Alamofire
 
-@testable import MyApp
+@testable import KizyApp
 
 struct Timeout {
     static var forRequest: TimeInterval {
