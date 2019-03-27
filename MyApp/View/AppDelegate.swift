@@ -18,7 +18,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     static let shared: AppDelegate = {
         guard let shared = UIApplication.shared.delegate as? AppDelegate else {
-            fatalError("Cannot cast `UIApplication.shared.delegate` to `AppDelegate`.")
+            fatalError("Cann't cast `UIApplication.shared.delegate` to `AppDelegate`.")
         }
         return shared
     }()
