@@ -1,17 +1,17 @@
 #!/bin/bash
 
-echo "Branch name: $TRAVIS_PULL_REQUEST_BRANCH"
+echo "Branch name: $TRAVIS_BRANCH"
 
-if [[ "$TRAVIS_PULL_REQUEST_BRANCH" == 'master' ]]; then
+if [[ "$TRAVIS_BRANCH" == 'master' ]]; then
     exit 0
 fi
 
 for PREFIX in feature bugfix hotfix release; do
-    if [[ "$TRAVIS_PULL_REQUEST_BRANCH" == $PREFIX/* ]]; then
+    if [[ "$TRAVIS_BRANCH" == $PREFIX/* ]]; then
         exit 0
     fi
     for CODE in app lib; do
-        if [[ "$TRAVIS_PULL_REQUEST_BRANCH" == $CODE/$PREFIX/* ]]; then
+        if [[ "$TRAVIS_BRANCH" == $CODE/$PREFIX/* ]]; then
             exit 0
         fi
     done
