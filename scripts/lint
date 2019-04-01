@@ -3,5 +3,5 @@
 if [ “$TRAVIS_PULL_REQUEST” != “false” ]
 then
  swiftlint --reporter json > swiftlint-report.json || false
- linterbot $TRAVIS_REPO_SLUG $TRAVIS_PULL_REQUEST < swiftlint-report.json
+ bundle exec linterbot "$TRAVIS_REPO_SLUG" "$TRAVIS_PULL_REQUEST" < swiftlint-report.json
 fi
